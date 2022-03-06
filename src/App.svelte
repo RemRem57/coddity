@@ -12,7 +12,7 @@
 
 <main>
     {#key count}
-        <h1>Hello {name}<span in:blur="{{duration: 200 }}">{count > 0 ? ' '+count : ''}</span>
+        <h1>Hello aurevoir {name}<span in:blur="{{duration: 200 }}">{count > 0 ? ' '+count : ''}</span>
         {count > 0 ? (count > 1 ? ' times' : ' time') : ''}!</h1>
     {/key}
 
