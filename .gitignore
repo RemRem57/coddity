@@ -1,3 +1,11 @@
+#Mac / JetBrains
+.DS_Store
+.idea
+
+#Svelte
+/public/build/
+package-lock.json
+
 # Logs
 logs
 *.log
