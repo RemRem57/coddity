@@ -4,7 +4,6 @@
 
 #Svelte
 /public/build/
-package-lock.json
 
 # Logs
 logs

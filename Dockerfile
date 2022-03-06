@@ -1,12 +1,12 @@
-FROM node:12 AS build
+FROM node:alpine as build
+RUN apk add --no-cache git
 
 WORKDIR /app
+RUN git clone https://github.com/RemRem57/coddity.git
+WORKDIR /app/coddity
 
-COPY package.json ./
-COPY package-lock.json ./
 RUN npm install
-COPY . ./
 RUN npm run build
 
 FROM nginx:1.19-alpine
-COPY --from=build /app/public /usr/share/nginx/html
+COPY --from=build /app/coddity/public /usr/share/nginx/html
